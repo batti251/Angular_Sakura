@@ -1,115 +1,127 @@
 /* You can add global styles to this file, and also import other style files */
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Raleway"
 }
 
-@mixin dFlex($jc: center, $ai: center, $fd: row, $g: 0){
+@mixin dFlex($jc: center, $ai: center, $fd: row, $g: 0) {
   display: flex;
   justify-content: $jc;
   align-items: $ai;
   flex-direction: $fd;
-  gap: $g
+  gap: $g;
 }
 
-@mixin margin($m: 0 0 0 0 ){
+@mixin margin($m: 0 0 0 0) {
   margin: $m;
 }
 
-@mixin padding($p: 0 0 0 0 ){
+@mixin padding($p: 0 0 0 0) {
   padding: $p;
 }
 
-@mixin fontStyle($fs: 24px , $fw: bold, $c: #000000){
+@mixin fontStyle($fs: 24px, $fw: bold, $c: #000000, $td: none) {
   font-size: $fs;
   font-weight: $fw;
-  color: $c
+  color: $c;
+  text-decoration: $td;
 }
 
-@mixin imgStyle($h:64px, $w: 64px){
+@mixin sizeStyle($h: 64px, $w: 64px) {
   height: $h;
   width: $w;
 }
 
+@mixin backgroundStyle($url: "", $bgs: cover, $bgr: no-repeat, $bgp: 50% 50%, $bgc:unset) {
+  background-image: $url;
+  background-size: $bgs;
+  background-repeat: $bgr;
+  background-position: $bgp;
+  background-color: $bgc;
+}
 
-section{
-    @include padding(120px 160px);
+@mixin borderStyle($br: 0.5rem, $bc: whitesmoke){
+  border-radius: $br;
+  border-color: $bc;
+}
 
-    >h2 {
-        @include dFlex($jc:center);
-        @include margin(0 0 64px 0);
-        @include fontStyle($fs: 80px, $c:#9F0908);
-    }
 
+section {
+  @include padding(120px 160px);
+
+  > h2 {
+    @include dFlex($jc: center);
+    @include margin(0 0 64px 0);
+    @include fontStyle($fs: 80px, $c: #9f0908);
+  }
 }
 
 /* raleway-200 - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Raleway';
+  font-family: "Raleway";
   font-style: normal;
   font-weight: 200;
-  src: url('assets/fonts/raleway-v37-latin-200.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("assets/fonts/raleway-v37-latin-200.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 /* raleway-300 - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Raleway';
+  font-family: "Raleway";
   font-style: normal;
   font-weight: 300;
-  src: url('assets/fonts/raleway-v37-latin-300.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("assets/fonts/raleway-v37-latin-300.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 /* raleway-regular - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Raleway';
+  font-family: "Raleway";
   font-style: normal;
   font-weight: 400;
-  src: url('assets/fonts/raleway-v37-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("assets/fonts/raleway-v37-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 /* raleway-italic - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Raleway';
+  font-family: "Raleway";
   font-style: italic;
   font-weight: 400;
-  src: url('assets/fonts/raleway-v37-latin-italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("assets/fonts/raleway-v37-latin-italic.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 /* raleway-500 - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Raleway';
+  font-family: "Raleway";
   font-style: normal;
   font-weight: 500;
-  src: url('assets/fonts/raleway-v37-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("assets/fonts/raleway-v37-latin-500.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 /* raleway-600 - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Raleway';
+  font-family: "Raleway";
   font-style: normal;
   font-weight: 600;
-  src: url('assets/fonts/raleway-v37-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("assets/fonts/raleway-v37-latin-600.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 /* raleway-700 - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Raleway';
+  font-family: "Raleway";
   font-style: normal;
   font-weight: 700;
-  src: url('assets/fonts/raleway-v37-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("assets/fonts/raleway-v37-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 /* raleway-800 - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Raleway';
+  font-family: "Raleway";
   font-style: normal;
   font-weight: 800;
-  src: url('assets/fonts/raleway-v37-latin-800.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("assets/fonts/raleway-v37-latin-800.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
-
-.fontRaleway{
-    font-family: 'Raleway';
+.fontRaleway {
+  font-family: "Raleway";
 }
-

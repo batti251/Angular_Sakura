@@ -7,7 +7,7 @@ section{
         @include dFlex($g:80px);
         
         >img{
-            @include imgStyle($h:352px, $w:352px);
+            @include sizeStyle($h:352px, $w:352px);
         }
 
         >table{

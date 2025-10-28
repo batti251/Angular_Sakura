@@ -1,50 +1,38 @@
+@import './../../../../styles.scss';
+
 nav {
-  height: 112px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 24px;
-  color: whitesmoke;
-  margin: 0 160px 0 160px;
+  @include sizeStyle($h: 112px, $w: unset);
+  @include dFlex($jc:space-between);
+  @include fontStyle($fs: 24px, $c: whitesmoke);
+  @include margin(0 160px 0 160px);
   > img {
-    width: 64px;
+    @include sizeStyle($h: 64px, $w: 64px);
   }
   > ul {
-    display: flex;
-    gap: 32px;
+    @include dFlex($g: 32px);
     list-style-type: none;
     > li {
-      color: whitesmoke;
-      text-decoration: none;
-
       > a {
+        @include fontStyle($c: whitesmoke, $td:none, $fs: 24px, $fw:normal);
         &:hover {
-          color: #9f0908;
+          @include fontStyle($fs: inherit, $c: #9f0908);
         }
       }
     }
     > button {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 4px;
-      border-radius: 0.5rem;
-      border-color: whitesmoke;
-      height: 32px;
-      width: 160px;
-      padding: 0.5rem;
-      background-color: #9f0908;
+      @include dFlex($g: 8px);
+      @include borderStyle();
+      @include sizeStyle($h: 40px, $w: 188px);
+      @include backgroundStyle($bgc: #9f0908);
         &:hover{
-            background-color: #b11111;
+            @include backgroundStyle($bgc: #b11111);
         }
       > img {
-        height: 16px;
+        @include sizeStyle($h: 16px, $w: 16px);
+      }
+      > a {
+        @include fontStyle($c: whitesmoke, $td:none, $fs: 24px, $fw:normal);
       }
     }
   }
-}
-
-a {
-  color: whitesmoke;
-  text-decoration: none;
 }
