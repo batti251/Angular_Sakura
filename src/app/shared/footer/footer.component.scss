@@ -1,0 +1,22 @@
+@import './../../../styles.scss';
+
+section{
+    @include dFlex($jc: space-around);
+    @include sizeStyle($h: 144px, $w: 100%);
+    @include padding(0 0 0 0);
+    @include backgroundStyle($bgc: #0A141E);
+
+    >div{
+        @include dFlex();
+
+        >img{
+            @include sizeStyle($h: 44px, $w: 288px)
+        }
+        >a{
+            @include fontStyle($fs: 24px, $c: whitesmoke);
+            &:hover{
+                @include fontStyle($c: #9f0908)
+            }
+        }
+    }
+}

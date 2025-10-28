@@ -15,7 +15,7 @@ nav {
       > a {
         @include fontStyle($c: whitesmoke, $td:none, $fs: 24px, $fw:normal);
         &:hover {
-          @include fontStyle($fs: inherit, $c: #9f0908);
+          @include fontStyle($c: #9f0908);
         }
       }
     }
