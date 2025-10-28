@@ -1,0 +1,50 @@
+nav {
+  height: 112px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 24px;
+  color: whitesmoke;
+  margin: 0 160px 0 160px;
+  > img {
+    width: 64px;
+  }
+  > ul {
+    display: flex;
+    gap: 32px;
+    list-style-type: none;
+    > li {
+      color: whitesmoke;
+      text-decoration: none;
+
+      > a {
+        &:hover {
+          color: #9f0908;
+        }
+      }
+    }
+    > button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      border-radius: 0.5rem;
+      border-color: whitesmoke;
+      height: 32px;
+      width: 160px;
+      padding: 0.5rem;
+      background-color: #9f0908;
+        &:hover{
+            background-color: #b11111;
+        }
+      > img {
+        height: 16px;
+      }
+    }
+  }
+}
+
+a {
+  color: whitesmoke;
+  text-decoration: none;
+}
