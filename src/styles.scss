@@ -4,6 +4,27 @@
     padding: 0;
 }
 
+@mixin dFlex($jc: center, $ai: center, $fd: row, $g: 0){
+  display: flex;
+  justify-content: $jc;
+  align-items: $ai;
+  flex-direction: $fd;
+  gap: $g
+}
+
+@mixin margin($m: 0 0 0 0 ){
+  margin: $m;
+}
+
+@mixin padding($p: 0 0 0 0 ){
+  padding: $p;
+}
+
+@mixin fontStyle($fs: 24px , $fw: bold, $c: #000000){
+  font-size: $fs;
+  font-weight: $fw;
+  color: $c
+}
 
 /* raleway-200 - latin */
 @font-face {
@@ -74,3 +95,4 @@
 .fontRaleway{
     font-family: 'Raleway';
 }
+
