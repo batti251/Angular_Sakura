@@ -1,3 +1,31 @@
+@import './../../../styles.scss';
+
 section{
-    height: 400px;
+    background-image: url('./../../../assets/img/3_section_our_menu/JPG/section_our_menu_bg.jpg');
+    @include dFlex($g: 56px, $fd: column);
+    >div {
+        @include dFlex($g:80px);
+        
+        >img{
+            @include imgStyle($h:352px, $w:352px);
+        }
+
+        >table{
+            @include fontStyle($fs:56px);
+            @include dFlex($fd: column, $g: 8px, $jc:unset, $ai: unset);
+            >tr {
+                @include dFlex($jc: space-between);
+                    >td{
+                    @include fontStyle($fs:32px, $c: #675E54);
+                }
+                >th {
+                    @include padding(0 0 8px 0)
+            }
+            
+            }
+        }
+    }
+    >.revert{
+            @include dFlex($fd: row-reverse, $g: 80px);
+        }
 }
